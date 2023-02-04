@@ -1,5 +1,6 @@
 import { Game, GameInput } from '@/models/game';
-import { GameForum } from '@/models/gameForum'
+import { GameForum } from '@/models/gameForum';
+import { GameMessage } from '@/models/gameMessage';
 import { createGameSchema, deleteGameSchema, updateGameSchema, getAllGameSchema, getDetailGameSchema } from '@/dto';
 import fs from 'fs';
 import { getAll } from '@/common/types';
@@ -105,6 +106,15 @@ export class GameService {
           id: id
         }
       });
+      if (game) {
+        await GameForum.update({
+          title: payload.title
+        }, {
+          where: {
+            gamesId: id
+          }
+        })
+      }
       return this.failedOrSuccessRequest('success', {});
     } catch (error) {
       return this.failedOrSuccessRequest('failed', error);
@@ -128,6 +138,13 @@ export class GameService {
           id: id
         }
       });
+
+      await GameForum.destroy({
+        where: {
+          gamesId: id
+        }
+      })
+
 
       if (data) {
         fs.unlinkSync(`./public/uploads/${findGame.image}`)
