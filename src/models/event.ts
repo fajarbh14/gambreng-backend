@@ -63,7 +63,7 @@ export const Event = db.define<EventInstance>('events', {
   },
   link_map: {
     type: DataTypes.TEXT,
-    allowNull: true
+    allowNull: false
   },
 }, {
   timestamps: true

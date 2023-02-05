@@ -21,6 +21,16 @@ export class AuthService {
       return this.failedOrSuccessRequest('failed', validateArgs.error);
     }
 
+    const checkUser = await User.findOne({
+      where: {
+        email: email
+      }
+    })
+
+    if (checkUser) {
+      return this.failedOrSuccessRequest('failed', 'Email already registered');
+    }
+
     //create the user
     const hashedPassword = await bycrypt.hash(password, 12);
     let user;
@@ -67,7 +77,7 @@ export class AuthService {
     const mailOptions = {
       to: user.email,
       subject: 'Gambreng Account Verification',
-      html: `<a href=${'gambreng.fajarbuana.my.id/account/verify/' + userVerification + '/' + user.id}>Verify</a>`
+      html: `<a href=${'gambreng.my.id/account/verify/' + userVerification + '/' + user.id}>Verify</a>`
     }
     // TODO: Send the account verification email to the user
     let sendMailError;
@@ -252,7 +262,7 @@ export class AuthService {
     const mailOptions = {
       to: email,
       subject: 'Gambreng Change Password',
-      html: `<a href=${'gambreng.fajarbuana.my.id/password/verify/' + changePasswordToken + '/' + user.id}>Verify</a>`
+      html: `<a href=${'gambreng.my.id/password/verify/' + changePasswordToken + '/' + user.id}>Verify</a>`
     }
 
     // TODO: Send the account verification email to the user
