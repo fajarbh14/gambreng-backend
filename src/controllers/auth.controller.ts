@@ -24,8 +24,13 @@ export const signIn = async (req: Request, res: Response) => {
     return getResponse(res, getHttpCode.FORBIDDEN, result.data, {});
   }
   return getResponse(res, getHttpCode.OK, 'User has been logged in', result.data);
-
 }
+
+export const me = async (req: Request, res: Response) => {
+  const { user } = req;
+  return getResponse(res, getHttpCode.OK, 'User has been logged in', user);
+}
+
 
 export const verifyAccount = async (req: Request, res: Response) => {
   const { token, userId } = req.body;
