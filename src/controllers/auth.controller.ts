@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { AuthService } from '../services';
-import { getResponse, getHttpCode } from '@/utils';
+import { getResponse, getHttpCode } from '../utils';
 
 const authService = new AuthService();
 

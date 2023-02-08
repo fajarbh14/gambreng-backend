@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
 import { GameMessageService } from '../services';
-import { getResponse, getHttpCode } from '@/utils';
+import { getResponse, getHttpCode } from '../utils';
 
 const gameMessageService = new GameMessageService();
 

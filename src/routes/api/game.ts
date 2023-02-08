@@ -1,7 +1,7 @@
-import { store, destroy, getAll, getById, update } from "@/controllers/game.controller";
+import { store, destroy, getAll, getById, update } from "../../controllers/game.controller";
 import { Router } from "express";
-import { requireAdmin } from "@/middleware/requireAdmin";
-import { upload } from "@/utils";
+import { requireAdmin } from "../../middleware/requireAdmin";
+import { upload } from "../../utils";
 
 const router = Router();
 

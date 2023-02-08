@@ -1,6 +1,6 @@
-import { GlobalMessage, GlobalMessageInput } from '@/models/globalMessage';
-import { createGlobalMessageSchema, updateGlobalMessageSchema } from '@/dto';
-import { User } from '@/models/user';
+import { GlobalMessage, GlobalMessageInput } from '../models/globalMessage';
+import { createGlobalMessageSchema } from '../dto';
+import { User } from '../models/user';
 
 export class GlobalMessageService {
   private failedOrSuccessRequest(status: string, data: any) {

@@ -1,6 +1,6 @@
-import { store } from "@/controllers/gameMessage.controller";
+import { store } from "../../controllers/gameMessage.controller";
 import { Router } from "express";
-import { requireUser } from "@/middleware/requireUser";
+import { requireUser } from "../../middleware/requireUser";
 
 const router = Router();
 

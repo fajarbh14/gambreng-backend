@@ -1,6 +1,6 @@
-import { store, getAll } from "@/controllers/globalMessage.controller";
+import { store, getAll } from "../../controllers/globalMessage.controller";
 import { Router } from "express";
-import { requireUser } from "@/middleware/requireUser";
+import { requireUser } from "../../middleware/requireUser";
 
 const router = Router();
 

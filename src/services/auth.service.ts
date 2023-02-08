@@ -1,6 +1,6 @@
-import { User, UserVerification, ChangePasswordToken } from '@/models/user';
-import { signUpSchema, signInSchema, changePasswordSchema, changePasswordEmailSchema } from '@/dto';
-import { signJWT } from '@/config/jwt';
+import { User, UserVerification, ChangePasswordToken } from '../models/user';
+import { signUpSchema, signInSchema, changePasswordSchema, changePasswordEmailSchema } from '../dto';
+import { signJWT } from '../config/jwt';
 import bycrypt from 'bcryptjs';
 import { createTransport } from 'nodemailer';
 import { v4 as uuidv4 } from 'uuid'

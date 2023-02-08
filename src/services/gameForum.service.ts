@@ -1,7 +1,7 @@
-import { GameForum } from '@/models/gameForum';
-import { GameMessage } from '@/models/gameMessage';
-import { User } from '@/models/user';
-import { getDetailGameForumSchema } from '@/dto';
+import { GameForum } from '../models/gameForum';
+import { GameMessage } from '../models/gameMessage';
+import { User } from '../models/user';
+import { getDetailGameForumSchema } from '../dto';
 export class GameForumService {
 
   private failedOrSuccessRequest(status: string, data: any) {

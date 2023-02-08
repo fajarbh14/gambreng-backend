@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
 import { GameService } from '../services';
-import { getResponse, getHttpCode } from '@/utils';
+import { getResponse, getHttpCode } from '../utils';
 import fs from 'fs'
 
 const gameService = new GameService();
