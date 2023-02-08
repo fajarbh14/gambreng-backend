@@ -1,5 +1,5 @@
-import { GameMessage, GameMessageInput } from '@/models/gameMessage';
-import { createGameMessageSchema, updateGameMessageSchema } from '@/dto';
+import { GameMessage, GameMessageInput } from '../models/gameMessage';
+import { createGameMessageSchema, updateGameMessageSchema } from '../dto';
 export class GameMessageService {
 
   private failedOrSuccessRequest(status: string, data: any) {

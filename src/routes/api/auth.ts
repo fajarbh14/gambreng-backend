@@ -1,5 +1,5 @@
-import { signIn, signUp, verifyAccount, sendChangePasswordEmail, verifyNewPassword, signOut, me } from "@/controllers/auth.controller";
-import { requireUser } from "@/middleware/requireUser";
+import { signIn, signUp, verifyAccount, sendChangePasswordEmail, verifyNewPassword, signOut, me } from "../../controllers/auth.controller";
+import { requireUser } from "../../middleware/requireUser";
 import { Router } from "express";
 
 const router = Router();

@@ -1,7 +1,7 @@
-import { Event, EventInput } from '@/models/event';
-import { createEventSchema, deleteEventSchema, updateEventSchema, getAllEventSchema, getDetailEventSchema } from '@/dto';
+import { Event, EventInput } from '../models/event';
+import { createEventSchema, deleteEventSchema, updateEventSchema, getAllEventSchema, getDetailEventSchema } from '../dto';
 import fs from 'fs';
-import { getAll } from '@/common/types';
+import { getAll } from '../common/types';
 
 export class EventService {
   private failedOrSuccessRequest(status: string, data: any) {

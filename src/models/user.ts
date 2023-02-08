@@ -1,5 +1,5 @@
 import { DataTypes, Model, Optional } from 'sequelize'
-import { db } from '../config/database'
+import db from '../config/database'
 import { GameMessage } from './gameMessage'
 interface UserAttributes {
     id?: string

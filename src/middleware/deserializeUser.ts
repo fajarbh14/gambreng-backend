@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from 'express';
-import { User } from '@/models/user';
+import { User } from '../models/user';
 import jwt from 'jsonwebtoken';
 import bycrypt from 'bcryptjs';
-import { signJWT, verifyJWT } from '@/config/jwt';
+import { signJWT, verifyJWT } from '../config/jwt';
 
 export default async function deserializeUser(
   req: Request,

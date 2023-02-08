@@ -1,9 +1,8 @@
-import { Game, GameInput } from '@/models/game';
-import { GameForum } from '@/models/gameForum';
-import { GameMessage } from '@/models/gameMessage';
-import { createGameSchema, deleteGameSchema, updateGameSchema, getAllGameSchema, getDetailGameSchema } from '@/dto';
+import { Game, GameInput } from '../models/game';
+import { GameForum } from '../models/gameForum';
+import { createGameSchema, deleteGameSchema, updateGameSchema, getAllGameSchema, getDetailGameSchema } from '../dto';
 import fs from 'fs';
-import { getAll } from '@/common/types';
+import { getAll } from '../common/types';
 
 export class GameService {
   private failedOrSuccessRequest(status: string, data: any) {

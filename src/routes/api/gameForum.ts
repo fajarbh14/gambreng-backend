@@ -1,6 +1,6 @@
-import { getAll, getById } from "@/controllers/gameForum.controller";
+import { getAll, getById } from "../../controllers/gameForum.controller";
 import { Router } from "express";
-import { requireUser } from "@/middleware/requireUser";
+import { requireUser } from "../../middleware/requireUser";
 
 const router = Router();
 

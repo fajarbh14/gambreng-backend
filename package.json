@@ -6,7 +6,7 @@
     "scripts": {
         "build": "tsc",
         "start": "node ./dist/index.js",
-        "dev": "concurrently \"ttsc --build --clean && ttsc --watch\" \"nodemon dist/index.js\""
+        "dev": "tsc && nodemon ./dist/index.js"
     },
     "repository": {
         "type": "git",
@@ -58,8 +58,6 @@
         "eslint-config-airbnb": "^19.0.4",
         "nodemon": "^2.0.16",
         "sequelize-cli": "^6.6.0",
-        "ttypescript": "^1.5.13",
-        "typescript": "^4.7.3",
-        "typescript-transform-paths": "^3.3.1"
+        "typescript": "^4.7.3"
     }
 }

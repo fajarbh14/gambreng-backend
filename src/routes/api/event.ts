@@ -1,7 +1,7 @@
-import { createEvent, destroy, getAllEvent, getById, update } from "@/controllers/event.controller";
+import { createEvent, destroy, getAllEvent, getById, update } from "../../controllers/event.controller";
 import { Router } from "express";
-import { requireAdmin } from "@/middleware/requireAdmin";
-import { upload } from "@/utils";
+import { requireAdmin } from "../../middleware/requireAdmin";
+import { upload } from "../../utils";
 
 const router = Router();
 

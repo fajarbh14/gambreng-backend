@@ -1,4 +1,5 @@
 {
+    "compileOnSave": true,
     "compilerOptions": {
         "strict": true,
         "baseUrl": ".",
@@ -14,12 +15,6 @@
                 "./src/*"
             ]
         },
-        "plugins": [
-            // Transform paths in output .js files
-            {
-                "transform": "typescript-transform-paths"
-            }
-        ]
     },
     "exclude": [
         "node_modules"

@@ -1,5 +1,5 @@
 import { DataTypes, Model, Optional } from 'sequelize'
-import { db } from '../config/database'
+import db from '../config/database'
 //Constructor 
 interface GameAttributes {
   id: string
